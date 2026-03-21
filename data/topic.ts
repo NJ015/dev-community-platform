@@ -1,0 +1,1 @@
+export const topics = ["JavaScript", "TypeScript", "React", "Next.js", "CSS", "Python", "DevOps", "AI & Machine Learning", "Cybersecurity", "Open Source"]
