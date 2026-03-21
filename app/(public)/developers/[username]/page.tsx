@@ -1,5 +1,6 @@
 import React from "react";
 import { developers } from "@/data/developer";
+import Link from "next/link";
 
 const page = async ({ params }: { params: Promise<{ username: string }> }) => {
   const { username } = await params;
@@ -14,6 +15,7 @@ const page = async ({ params }: { params: Promise<{ username: string }> }) => {
       <h1>{dev.username}</h1>
       <p>{dev.role}</p>
       <p>{dev.bio}</p>
+      <Link href={`/developers/${dev.username}/posts`}>View Posts</Link>
     </div>
   );
 };
