@@ -2,7 +2,10 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div>page</div>
+    <>
+    <h1>Mobile Development</h1>
+    <p>iOS, Android, and cross-platform mobile development. Share apps, tools, and techniques</p>
+    </>
   )
 }
 
