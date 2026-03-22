@@ -11,11 +11,15 @@ const page = async ({ params }: { params: Promise<{ username: string }> }) => {
   }
   
   return (
-    <div>
-      <h1>{dev.username}</h1>
-      <p>{dev.role}</p>
-      <p>{dev.bio}</p>
-      <Link href={`/developers/${dev.username}/posts`}>View Posts</Link>
+    <div className="min-h-[calc(100vh-8rem)] flex items-center">
+      <div className="px-8 py-12 max-w-2xl mx-auto bg-gray-800 rounded-xl shadow-lg shadow-black/50">
+        <h1 className="text-3xl font-bold text-white mb-2">{dev.username}</h1>
+        <p className="text-blue-400 mb-4">{dev.role}</p>
+        <p className="text-gray-400 mb-8">{dev.bio}</p>
+        <Link href={`/developers/${dev.username}/posts`} className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors duration-300">
+          View Posts
+        </Link>
+      </div>
     </div>
   );
 };
