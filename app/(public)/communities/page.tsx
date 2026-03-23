@@ -4,6 +4,7 @@ import Community_Card from '@/components/Community_Card'
 
 const page = () => {
   return (
+    <section className='space-y-6'>
     <div className="px-8 py-12">
     <h1 className="text-3xl font-bold text-white mb-2">Communities</h1>
     <p className="text-gray-400 mb-8">Browse and join developer communities. Find your people, share knowledge, and grow together</p>
@@ -17,6 +18,7 @@ const page = () => {
       </ul>
     </div>
     </div>
+    </section>
   )
 }
 

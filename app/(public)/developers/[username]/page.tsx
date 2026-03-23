@@ -2,8 +2,12 @@ import React from "react";
 import { developers } from "@/data/developer";
 import Link from "next/link";
 
-const page = async ({ params }: { params: Promise<{ username: string }> }) => {
-  const { username } = await params;
+type PageProps = {
+  params: Promise<{ username: string }>
+}
+
+const page = async (props: PageProps) => {
+  const { username } = await props.params;
   const dev = developers.find((dev) => dev.username === username);
 
   if (!dev) {
