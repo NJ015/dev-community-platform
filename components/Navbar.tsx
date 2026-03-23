@@ -2,11 +2,13 @@
 import Link from "next/link";
 import React from "react";
 import { usePathname } from "next/navigation";
+// import { header } from "next/headers";
 
 const Navbar = () => {
   const pathname = usePathname();
 
   return (
+    <header className="border-b">
     <nav className="flex bg-gray-800 px-8 py-4 items-center justify-between border-b border-gray-700">
       <Link href={"/"} className="text-white font-bold text-xl">
         DevCommunity
@@ -64,6 +66,7 @@ const Navbar = () => {
       </Link>
       </div>
     </nav>
+    </header>
   );
 };
 
